@@ -3,5 +3,52 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #f1bfc8;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
+.article-list {
+  margin: 10px;
+  justify-content: space-between;
+}
+
+body {
+  background-color: #f1bfc8;
+}
+
+.article-card {
+  background-color: #f3e174;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  text-align: left;
+}
+
+.article-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.article-card h4 {
+  margin: 0.5rem 0;
+  color: #555;
+  font-size: 1.2rem;
+}
+
+.article-card .view-article {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #f1bfc8;
+  color: #555;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.article-card .view-article:hover {
+  background-color: #e09ea6;
+}
