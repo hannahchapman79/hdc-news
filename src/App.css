@@ -52,3 +52,12 @@ body {
 .article-card .view-article:hover {
   background-color: #e09ea6;
 }
+
+.single-article {
+  background-color: #f3e174;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  text-align: center;
+}
