@@ -5,10 +5,11 @@ import Homepage from './components/Homepage'
 import { Route, Routes } from 'react-router-dom'
 import ArticleProvider from './components/ArticleProvider'
 import SingleArticle from './components/SingleArticle.jsx'
+import CommentsList from './components/CommentsList'
 
 function App() {
 
-const [isLoading, setIsLoading] = useState(true);
+const [isLoading, setIsLoading] = useState(false);
 
   return (
     <>
@@ -19,6 +20,8 @@ const [isLoading, setIsLoading] = useState(true);
       <Route path="/articles" element={<ArticleProvider setIsLoading={setIsLoading} isLoading={isLoading}/>}>
       </Route>
       <Route path="/articles/:article_id" element={<SingleArticle setIsLoading={setIsLoading} isLoading={isLoading}/>}>
+      </Route>
+      <Route path="/articles/:article_id/comments" element={<CommentsList setIsLoading={setIsLoading} isLoading={isLoading}/>}>
       </Route>
     </Routes>
     </>
