@@ -75,3 +75,7 @@ body {
 .comment-author {
   font-weight: bold;
 }
+
+.single-article button {
+  margin: 20px;
+}

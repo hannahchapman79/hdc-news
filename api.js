@@ -22,4 +22,8 @@ const getArticles = () => {
     })
   }
 
-  export { getArticles, getArticleById, getCommentsByArticleId };
+  const incrementVotes = (article_id, value) => {
+    return api.patch(`/articles/${article_id}`, { inc_votes: value })
+  }
+
+  export { getArticles, getArticleById, getCommentsByArticleId, incrementVotes };
