@@ -3,6 +3,7 @@ import { getArticleById } from "../../api";
 import { useParams } from "react-router-dom";
 import Loading from "./Loading";
 import { Link } from "react-router-dom";
+import VoteHandler from "./VoteHandler";
 
 function SingleArticle () {
 
@@ -34,6 +35,7 @@ if (isLoading) {
         <Link to={`/articles/${article.article_id}/comments`}>
         <button className="view-comments">View all comments</button>
         </Link>
+        <VoteHandler article={article}/>
         </section>
     </>
   );
