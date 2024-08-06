@@ -1,18 +1,24 @@
 import { useState, useEffect } from "react"
-import getArticles from "../../api";
+import { getArticles } from "../../api";
 import ArticleCard from "./ArticleCard";
+import Loading from "./Loading";
 
 function ArticlesList(props) {
 
-const { currentArticles, setCurrentArticles, sortBy, setSortBy } = props;
+  const { currentArticles, setCurrentArticles, sortBy, setSortBy, isLoading, setIsLoading } = props;
 
-useEffect(() => {
+  useEffect(() => {
+    setIsLoading(true)
     getArticles().then((articles) => {
-        console.log(articles);
-        setCurrentArticles(articles);
+      setCurrentArticles(articles);
+      setIsLoading(false)
     });
   }, []);
 
+
+  if (isLoading) {
+    return <Loading></Loading>;
+  } else {
   return (
     <>
       <h2>Articles</h2>
@@ -23,7 +29,7 @@ useEffect(() => {
       </section>
     </>
   );
-
+      }
 }
 
 export default ArticlesList;
