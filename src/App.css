@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: #f1bfc8;
+  background-color: #ffefd5;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
@@ -13,11 +13,11 @@
 }
 
 body {
-  background-color: #f1bfc8;
+  background-color: #ffefd5;
 }
 
 .article-card {
-  background-color: #f3e174;
+  background-color: #fdbcb4;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
   padding: 1.5rem;
@@ -41,20 +41,30 @@ body {
 .article-card .view-article {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
-  background-color: #f1bfc8;
+  background-color: #fdbcb4;
   color: #555;
   border: none;
   border-radius: 3px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  border: 2px solid #f3e174;
 }
 
 .article-card .view-article:hover {
-  background-color: #e09ea6;
+  background-color: #ff9393;
 }
 
 .single-article {
-  background-color: #f3e174;
+  background-color: #fdbcb4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.comment-card {
+  background-color: #b9d9eb;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
   padding: 1.5rem;
