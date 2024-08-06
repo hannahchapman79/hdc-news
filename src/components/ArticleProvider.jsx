@@ -1,10 +1,11 @@
 import { useState } from "react"
 import ArticlesList from "./ArticlesList"
 
-const ArticleProvider = (props) => {
+const ArticleProvider = () => {
     const [currentArticles, setCurrentArticles] = useState([])
     const [sortBy, setSortBy] = useState("")
-    const { isLoading, setIsLoading } = props;
+
+    const [isLoading, setIsLoading] = useState(false);
 
     return (
         <>

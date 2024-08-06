@@ -4,12 +4,12 @@ import { useParams } from "react-router-dom";
 import Loading from "./Loading";
 import { Link } from "react-router-dom";
 
-function SingleArticle (props) {
+function SingleArticle () {
 
 const [article, setArticle] = useState({});
 const { article_id } = useParams();
 
-const {isLoading, setIsLoading } = props;
+const [isLoading, setIsLoading] = useState(false);
 
 
 useEffect(() => {

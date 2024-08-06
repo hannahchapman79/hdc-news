@@ -9,19 +9,17 @@ import CommentsList from './components/CommentsList'
 
 function App() {
 
-const [isLoading, setIsLoading] = useState(false);
-
   return (
     <>
     <Header></Header>
     <Routes>
       <Route path="/" element={<Homepage/>}>
       </Route>
-      <Route path="/articles" element={<ArticleProvider setIsLoading={setIsLoading} isLoading={isLoading}/>}>
+      <Route path="/articles" element={<ArticleProvider/>}>
       </Route>
-      <Route path="/articles/:article_id" element={<SingleArticle setIsLoading={setIsLoading} isLoading={isLoading}/>}>
+      <Route path="/articles/:article_id" element={<SingleArticle/>}>
       </Route>
-      <Route path="/articles/:article_id/comments" element={<CommentsList setIsLoading={setIsLoading} isLoading={isLoading}/>}>
+      <Route path="/articles/:article_id/comments" element={<CommentsList/>}>
       </Route>
     </Routes>
     </>

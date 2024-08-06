@@ -71,3 +71,7 @@ body {
   margin: 1rem 0;
   text-align: center;
 }
+
+.comment-author {
+  font-weight: bold;
+}

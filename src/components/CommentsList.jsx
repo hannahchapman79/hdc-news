@@ -4,9 +4,9 @@ import { getCommentsByArticleId } from "../../api";
 import CommentCard from "./CommentCard";
 import { useParams } from "react-router-dom";
 
-function CommentsList(props) {
+function CommentsList() {
 
-    const { setIsLoading, isLoading } = props;
+    const [isLoading, setIsLoading] = useState(false);
     const [currentComments, setCurrentComments] = useState([])
     const { article_id } = useParams();
 
@@ -19,7 +19,7 @@ function CommentsList(props) {
     }, []);
 
     if (isLoading) {
-        return <Loading></Loading>;
+        return <Loading/>;
       } else {
       return (
         <>
