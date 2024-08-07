@@ -30,4 +30,10 @@ const getArticles = () => {
     return api.post(`/articles/${article_id}/comments`, newComment)
   }
 
-  export { getArticles, getArticleById, getCommentsByArticleId, incrementVotes, postComment };
+  const deleteComment = (comment_id) => {
+    return api.delete(`/comments/${comment_id}`).then(({data}) => {
+      return data;
+    })
+  }
+
+  export { getArticles, getArticleById, getCommentsByArticleId, incrementVotes, postComment, deleteComment };
