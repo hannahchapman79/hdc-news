@@ -9,7 +9,7 @@ const ArticleProvider = () => {
 
     return (
         <>
-            <ArticlesList currentArticles={currentArticles} setCurrentArticles={setCurrentArticles} isLoading={isLoading} setIsLoading={setIsLoading}/>
+            <ArticlesList currentArticles={currentArticles} setCurrentArticles={setCurrentArticles} isLoading={isLoading} setIsLoading={setIsLoading} />
         </>
     )
 }
