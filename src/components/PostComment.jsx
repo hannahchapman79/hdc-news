@@ -50,7 +50,7 @@ function PostComment (props) {
         <>
             <form onSubmit={handleSubmit} >
                 <label htmlFor="new-comment-body">Post a comment!</label>
-                <input type="text" id="new-comment-body"  name="new-comment-body" value={newCommentBody} onChange={handleBodyChange} required ></input>
+                <textarea  id="new-comment-body"  name="new-comment-body" value={newCommentBody} onChange={handleBodyChange} required></textarea>
                 <button type="submit" >Submit</button>
             </form>
         </>

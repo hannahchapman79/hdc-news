@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import Loading from "./Loading";
 import { Link } from "react-router-dom";
 import VoteHandler from "./VoteHandler";
+import CommentList from "./CommentsList";
 
 function SingleArticle () {
 
@@ -32,10 +33,8 @@ if (isLoading) {
         <p>{article.body}</p>
         <img src={article.article_img_url} />
         <p>Author: {article.author}</p>
-        <Link to={`/articles/${article.article_id}/comments`}>
-        <button className="view-comments">View all comments</button>
-        </Link>
         <VoteHandler article={article}/>
+        <CommentList article={article}></CommentList>
         </section>
     </>
   );

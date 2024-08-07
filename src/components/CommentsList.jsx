@@ -20,15 +20,12 @@ function CommentsList() {
     }, []);
 
 
- 
-
-
     if (isLoading) {
         return <Loading/>;
       } else {
       return (
         <>
-          <h2>All comments</h2>
+          <h2>Comments</h2>
         <PostComment article_id={article_id}/>
           <section className="comment-list">
             {currentComments.map((comment) => {
