@@ -6,7 +6,7 @@ import { Route, Routes } from 'react-router-dom'
 import ArticleProvider from './components/ArticleProvider'
 import SingleArticle from './components/SingleArticle.jsx'
 import CommentsList from './components/CommentsList'
-import { UserProvider } from './user'
+import { TopicList } from './components/TopicList'
 
 function App() {
 
@@ -21,6 +21,10 @@ function App() {
       <Route path="/articles/:article_id" element={<SingleArticle/>}>
       </Route>
       <Route path="/articles/:article_id/comments" element={<CommentsList/>}>
+      </Route>
+      <Route path="/topics" element={<TopicList/>}>
+      </Route>
+      <Route path="/articles?topic=:topic_slug" element={<ArticleProvider/>}>
       </Route>
     </Routes>
     </>

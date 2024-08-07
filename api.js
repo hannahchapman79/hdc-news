@@ -4,8 +4,9 @@ const api = axios.create({
   baseURL: "https://be-nc-news-flqs.onrender.com/api",
 });
 
-const getArticles = () => {
-    return api.get("/articles").then(({data}) => {
+const getArticles = (sort_by = "") => {
+  const url = sort_by ? `/articles/?topic=${sort_by}` : '/articles';
+    return api.get(url).then(({data}) => {
       return data.articles
     })
   }
@@ -36,4 +37,11 @@ const getArticles = () => {
     })
   }
 
-  export { getArticles, getArticleById, getCommentsByArticleId, incrementVotes, postComment, deleteComment };
+  const getTopics = () => {
+    return api.get("/topics").then(({data}) => {
+      return data.topics
+    })
+  }
+
+
+  export { getArticles, getArticleById, getCommentsByArticleId, incrementVotes, postComment, deleteComment, getTopics };
