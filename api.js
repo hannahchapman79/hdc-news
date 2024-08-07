@@ -26,4 +26,8 @@ const getArticles = () => {
     return api.patch(`/articles/${article_id}`, { inc_votes: value })
   }
 
-  export { getArticles, getArticleById, getCommentsByArticleId, incrementVotes };
+  const postComment = (article_id, newComment) => {
+    return api.post(`/articles/${article_id}/comments`, newComment)
+  }
+
+  export { getArticles, getArticleById, getCommentsByArticleId, incrementVotes, postComment };

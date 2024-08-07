@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom'
 import ArticleProvider from './components/ArticleProvider'
 import SingleArticle from './components/SingleArticle.jsx'
 import CommentsList from './components/CommentsList'
+import { UserProvider } from './user'
 
 function App() {
 
