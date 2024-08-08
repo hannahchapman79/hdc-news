@@ -17,7 +17,7 @@ function CommentsList() {
             setCurrentComments(comments);
             setIsLoading(false)
         });
-    }, []);
+    }, [article_id]); 
 
 
     if (isLoading) {
@@ -26,7 +26,7 @@ function CommentsList() {
       return (
         <>
           <h2>Comments</h2>
-        <PostComment article_id={article_id}/>
+        <PostComment article_id={article_id} currentComments={currentComments} setCurrentComments={setCurrentComments}/>
           <section className="comment-list">
             {currentComments.map((comment) => {
               return <CommentCard key={comment.comment_id} comment={comment}></CommentCard>

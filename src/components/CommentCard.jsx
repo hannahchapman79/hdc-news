@@ -18,6 +18,7 @@ function handleClick(event) {
   })
 }
 
+
 if (deletedComment) {
   return <h2>Comment successfully deleted!</h2>
 }

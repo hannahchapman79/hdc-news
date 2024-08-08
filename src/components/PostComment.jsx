@@ -2,12 +2,13 @@ import { postComment } from "../../api"
 import { useState, useEffect } from "react"
 import { useContext } from "react";
 import { UserContext } from "../user";
+import CommentCard from "./CommentCard";
 
 function PostComment (props) {
 
-    const { loggedInUser, setLoggedInUser } = useContext(UserContext);
+    const { loggedInUser, setLoggedInUser  } = useContext(UserContext);
 
-    const { article_id } = props
+    const { article_id, currentComments, setCurrentComments } = props
     const [newCommentBody, setNewCommentBody] = useState("")
     const [commentSuccess, setCommentSuccess] = useState(false)
     const [commentFail, setCommentFail] = useState(false)
@@ -24,16 +25,15 @@ function PostComment (props) {
             body: newCommentBody
         }
         setIsLoading(true)
-        postComment(article_id, newComment).then(() => { 
+        postComment(article_id, newComment).then((data) => { 
             setNewCommentBody("");
             setCommentSuccess(true);
             setIsLoading(false);
+            setCurrentComments((prevComments) => [data.data.comment, ...prevComments])
         }).catch(() => {
             setCommentFail(true);
         })
-
     }
-
 
     if (commentSuccess) {
     return <h2>Comment successfully posted!</h2>
