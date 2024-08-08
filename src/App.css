@@ -88,3 +88,15 @@ body {
 .single-article button {
   margin: 20px;
 }
+
+#topic-link {
+  color: #1a73e8; 
+  text-decoration: none; 
+  cursor: pointer;
+  transition: color 0.3s ease; 
+}
+
+#topic-link:hover {
+  color: #0756be;
+  text-decoration: underline;
+}

@@ -1,12 +1,12 @@
 import axios from "axios";
+import { useSearchParams } from "react-router-dom";
 
 const api = axios.create({
   baseURL: "https://be-nc-news-flqs.onrender.com/api",
 });
 
-const getArticles = (sort_by = "") => {
-  const url = sort_by ? `/articles/?topic=${sort_by}` : '/articles';
-    return api.get(url).then(({data}) => {
+const getArticles = (params = {}) => {
+    return api.get('/articles', { params }).then(({data}) => {
       return data.articles
     })
   }
