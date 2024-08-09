@@ -7,11 +7,14 @@ import { SortBy } from "./SortBy";
 import ErrorComponent from "./Error"
 
 
-function ArticlesList(props) {
+function ArticlesList() {
 
+  const [currentArticles, setCurrentArticles] = useState([])
+  const [sortBy, setSortBy] = useState("")
+  const [order, setOrder] = useState("");
   const [searchParams, setSearchParams] = useSearchParams()
   const topic = searchParams.get("topic")
-  const { currentArticles, setCurrentArticles, isLoading, setIsLoading, sortBy, setSortBy, order, setOrder} = props;
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
   useEffect(() => {
