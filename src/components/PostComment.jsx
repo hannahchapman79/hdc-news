@@ -34,13 +34,6 @@ function PostComment (props) {
             setCommentFail(true);
         })
     }
-
-    if (commentSuccess) {
-    return <h2>Comment successfully posted!</h2>
-    }
-    if (commentFail) {
-       return <h2>Comment failed to post, please try again..</h2>
-    }
     if (isLoading) {
         return <h2>Posting your comment...</h2>;
     }
@@ -48,6 +41,8 @@ function PostComment (props) {
 
     return (
         <>
+        {commentSuccess ? <h2>Comment successfully posted!</h2> : null}
+        {commentFail ? <h2>Comment failed to post, please try again..</h2> : null}
             <form onSubmit={handleSubmit} >
                 <label htmlFor="new-comment-body">Post a comment!</label>
                 <textarea  id="new-comment-body"  name="new-comment-body" value={newCommentBody} onChange={handleBodyChange} required></textarea>
