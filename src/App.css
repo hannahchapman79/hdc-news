@@ -7,6 +7,15 @@
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
+nav {
+  padding: 15px 30px;
+  margin: 0 auto 30px auto;
+  border-radius: 10px;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+}
+
 .article-list {
   margin: 10px;
   justify-content: space-between;
@@ -37,6 +46,10 @@ body {
   color: #555;
   font-size: 1.2rem;
 }
+
+.article-card p {
+  align-items: center;
+ }
 
 .article-card .view-article {
   margin-top: 1rem;
@@ -90,13 +103,57 @@ body {
 }
 
 #topic-link {
-  color: #1a73e8; 
+  color: #333; 
   text-decoration: none; 
   cursor: pointer;
   transition: color 0.3s ease; 
+  background-color: #ffefd5;
+  text-align: center;
 }
 
 #topic-link:hover {
   color: #0756be;
   text-decoration: underline;
+}
+
+.sort-by-form {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.sort-by-form select {
+  padding: 8px 12px; 
+  font-size: 16px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  background-color: #fff; 
+  cursor: pointer; 
+  transition: border-color 0.3s;
+}
+
+.sort-by-form option {
+  padding: 10px; 
+}
+
+.sort-by-form label {
+  margin-right: 10px; 
+  font-weight: bold; 
+}
+
+.sort-by-form input {
+  margin-left: 10px; 
+}
+
+.sort-by-form input {
+  margin: 10px; 
+}
+
+.error-page {
+  background-color: #ff9393;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  text-align: center;
 }

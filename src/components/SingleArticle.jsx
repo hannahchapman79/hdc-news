@@ -5,6 +5,7 @@ import Loading from "./Loading";
 import { Link } from "react-router-dom";
 import VoteHandler from "./VoteHandler";
 import CommentList from "./CommentsList";
+import ErrorComponent from "./Error"
 
 function SingleArticle () {
 
@@ -12,15 +13,27 @@ const [article, setArticle] = useState({});
 const { article_id } = useParams();
 
 const [isLoading, setIsLoading] = useState(false);
-
+const [error, setError] = useState(null);
 
 useEffect(() => {
   setIsLoading(true)
   getArticleById(article_id).then((article) => {
     setArticle(article);
     setIsLoading(false)
-  });
+  })
+  .catch((err) => {
+    const errorResponse = {
+      status: err.response.status || 500,
+      message: err.response.data.message || "Something went wrong!",
+    };
+    setError(errorResponse);
+    setIsLoading(false);
+  })
 }, [article_id]);
+
+if (error) {
+  return <ErrorComponent message={error.message} />;
+}
 
 if (isLoading) {
   return <Loading></Loading>;

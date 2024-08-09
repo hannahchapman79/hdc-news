@@ -7,25 +7,20 @@ import ArticleProvider from './components/ArticleProvider'
 import SingleArticle from './components/SingleArticle.jsx'
 import CommentsList from './components/CommentsList'
 import { TopicList } from './components/TopicList'
+import ErrorComponent from './components/Error'
 
 function App() {
 
   return (
     <>
-    <Header></Header>
+    <Header/>
     <Routes>
-      <Route path="/" element={<Homepage/>}>
-      </Route>
-      <Route path="/articles" element={<ArticleProvider/>}>
-      </Route>
-      <Route path="/articles/:article_id" element={<SingleArticle/>}>
-      </Route>
-      <Route path="/articles/:article_id/comments" element={<CommentsList/>}>
-      </Route>
-      <Route path="/topics" element={<TopicList/>}>
-      </Route>
-      <Route path="/articles?topic=:topic_slug" element={<ArticleProvider/>}>
-      </Route>
+      <Route path="/" element={<Homepage/>} />
+      <Route path="/articles" element={<ArticleProvider/>} />
+      <Route path="/articles/:article_id" element={<SingleArticle/>} />
+      <Route path="/articles/:article_id/comments" element={<CommentsList/>} />
+      <Route path="/topics" element={<TopicList/>} />
+      <Route path="*" element={<ErrorComponent/>} />
     </Routes>
     </>
   )

@@ -42,7 +42,7 @@ export function SortBy({ setSortBy, setOrder }) {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="sort-by-form">
                 <label>Sort by</label>
                 <select name="sort_by" onChange={handleSortByChange}>
                     <option value="">Select</option>
