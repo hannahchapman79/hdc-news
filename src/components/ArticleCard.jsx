@@ -9,17 +9,21 @@ function ArticleCard(props) {
   return (
     <>
       <section className="article-card">
+        <div className="article-list-img">
+        <img src={article.article_img_url} id="article-list-img"/>
+        </div>
+        <div className="article-list-text"> 
         <Link to={`/articles?topic=${article.topic}`}>
           <h4 id="topic-link">{article.topic}</h4>
         </Link>
+        <Link to={`/articles/${article.article_id}`}>
         <h3>{article.title}</h3>
-        <h4>Author: {article.author}</h4>
+        </Link>
+        <h4 id="article-author">{article.author}</h4>
         <p>Comments: {article.comment_count}</p>
         <p>{readableDate}</p>
         <p>Votes: {article.votes}</p>
-        <Link to={`/articles/${article.article_id}`}>
-          <button className="view-article">View article</button>
-        </Link>
+        </div>
       </section>
     </>
   );

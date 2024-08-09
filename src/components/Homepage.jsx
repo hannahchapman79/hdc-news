@@ -7,7 +7,8 @@ function Homepage() {
 
   return (
     <>
-      <h1>Hey {loggedInUser.name}! Welcome to NC News!</h1>
+      <h1>NC News</h1>
+      <h2>Your Daily Dose of Insight.</h2>
     </>
   );
 }
