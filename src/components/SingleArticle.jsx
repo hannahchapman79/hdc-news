@@ -44,7 +44,7 @@ if (isLoading) {
         <h1>{article.title}</h1>
         <p>Topic: {article.topic}</p>
         <p>{article.body}</p>
-        <img src={article.article_img_url} />
+        <img src={article.article_img_url} className="single-article-img" />
         <p>Author: {article.author}</p>
         <VoteHandler article={article}/>
         <CommentList article={article}></CommentList>

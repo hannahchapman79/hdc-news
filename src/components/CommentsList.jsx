@@ -5,7 +5,7 @@ import CommentCard from "./CommentCard";
 import { useParams } from "react-router-dom";
 import PostComment from "./PostComment";
 
-function CommentsList() {
+function CommentsList( {article} ) {
 
     const [isLoading, setIsLoading] = useState(false);
     const [currentComments, setCurrentComments] = useState([])
@@ -25,7 +25,7 @@ function CommentsList() {
       } else {
       return (
         <>
-          <h2>Comments</h2>
+          <h2>Comments ({article.comment_count})</h2>
         <PostComment article_id={article_id} currentComments={currentComments} setCurrentComments={setCurrentComments}/>
           <section className="comment-list">
             {currentComments.map((comment) => {

@@ -59,7 +59,7 @@ function ArticlesList() {
   } else {
   return (
     <>
-    {topic ? <h2>{topic} articles</h2> : <h2>Articles</h2>}
+    {topic ? <h2>{topic} articles</h2> : null}
     <SortBy sortBy={sortBy} setSortBy={setSortBy} order={order} setOrder={setOrder}></SortBy>
       <section className="article-list">
         {currentArticles.map((article) => {
