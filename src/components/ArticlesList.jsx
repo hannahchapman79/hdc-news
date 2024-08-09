@@ -35,6 +35,9 @@ function ArticlesList(props) {
     })
   }, [topic, sortBy, order, setIsLoading, setCurrentArticles, searchParams])
 
+  useEffect(() => {
+    setError(null);
+  }, [searchParams]);
 
   useEffect(() => {
     const newParams = {};
