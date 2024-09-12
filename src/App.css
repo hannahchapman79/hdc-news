@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif
 }
 
 nav {
@@ -21,6 +21,8 @@ nav {
   align-items: center; 
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  overflow-x: hidden;
+  width: 100vw; 
 }
 
 nav a {
@@ -34,6 +36,22 @@ nav a {
   color: #00bbc9;
 }
 
+@media only screen and (max-width: 600px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    width: 100%;
+    padding: 10px;
+    height: 10%;
+  }
+
+  nav a {
+    padding: 0;
+    width: 55%;
+    margin: 0;
+  }
+}
 
 .article-list {
   margin: 10px;
