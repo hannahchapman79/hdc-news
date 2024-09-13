@@ -56,11 +56,13 @@ function PostComment(props) {
             <>
                 {commentSuccess && isVisible ? <h2>Comment successfully posted!</h2> : null}
                 {commentFail ? <h2>Comment failed to post, please try again..</h2> : null}
+                    <div className="comment-form-container">
                 <form onSubmit={handleSubmit} >
                     <label htmlFor="new-comment-body">Post a comment!</label>
                     <textarea id="new-comment-body" name="new-comment-body" value={newCommentBody} onChange={handleBodyChange} required></textarea>
                     <button type="submit" >Submit</button>
                 </form>
+                    </div>
             </>
         )
     }

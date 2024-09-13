@@ -20,9 +20,11 @@ const incrementVote = () => {
 
 return (
     <>
-            <h3>Votes:{article.votes + incrementedVotes}</h3>
+            <h3>Votes: {article.votes + incrementedVotes}</h3>
+            <div className="vote-handler-container">
             <button className="upvote-button" onClick={incrementVote}>Up-vote</button>
             <button className="downvote-button" onClick={decrementVote}>Down-vote</button>
+            </div>
         </>
     )
 }

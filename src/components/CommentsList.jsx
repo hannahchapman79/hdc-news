@@ -25,8 +25,8 @@ function CommentsList( {article} ) {
       } else {
       return (
         <>
-          <h2>Comments ({article.comment_count})</h2>
         <PostComment article_id={article_id} currentComments={currentComments} setCurrentComments={setCurrentComments}/>
+          <h2>Comments ({article.comment_count})</h2>
           <section className="comment-list">
             {currentComments.map((comment) => {
               return <CommentCard key={comment.comment_id} comment={comment}></CommentCard>
