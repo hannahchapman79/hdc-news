@@ -3,7 +3,7 @@ import loadingAnimation from "../components/loading-animation.json"
 
 function Loading () {
     return (
-      <Lottie className="loading-animation" animationData={loadingAnimation} loop="true"/>
+      <Lottie className="loading-animation" animationData={loadingAnimation} loop={true}/>
       )
 }
 

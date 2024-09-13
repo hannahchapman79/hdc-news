@@ -36,7 +36,7 @@ if (isLoading) {
      <>
      <div className="loading-container">
     <h2>Deleting your comment...</h2>
-      <Lottie className="loading-animation" animationData={loadingAnimation} loop="true"/>
+      <Lottie className="loading-animation" animationData={loadingAnimation} loop={true}/>
      </div>
       </>
       )
