@@ -6,7 +6,7 @@
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif
 }
 
-nav {
+.navigation-bar {
   padding: 15px 30px;
   margin: 0 auto 30px auto;
   border-radius: 10px;
@@ -25,10 +25,15 @@ nav {
   width: 100vw;
 }
 
-nav a {
+.navigation-bar a {
   color: black;
   display: inline-block;
   margin: 0 30px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
 }
 
 #nc-title {
@@ -134,7 +139,7 @@ body {
   width: 80%;
   margin: 20px auto;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .comment-form-container textarea {
@@ -188,13 +193,23 @@ body {
   text-decoration: underline;
 }
 
-.sort-by-form {
+.sort-by-form, .limit-results-form {
   display: flex;
   align-items: center;
-  margin: 10px 0;
+  margin: 10px 20px;
 }
 
-.sort-by-form select {
+.sort-by-form  select {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.limit-results-form  select {
   padding: 8px 12px;
   font-size: 1rem;
   border: 1px solid #ccc;
@@ -215,10 +230,21 @@ body {
 
 .sort-by-form input {
   margin-left: 10px;
+  margin: 10px;
 }
 
-.sort-by-form input {
+.limit-results-form label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.limit-results-form input {
+  margin-left: 10px;
   margin: 10px;
+}
+
+.limit-results-form option {
+  padding: 10px;
 }
 
 .error-page {
@@ -248,7 +274,23 @@ body {
   width: 100%;
 }
 
+.article-list-form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 @media only screen and (max-width: 600px) {
+
+  .article-list-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.9rem;
+    align-items: center;
+    align-content: center;
+  }
+
   .article-card {
     flex-direction: column;
     display: flex;
@@ -258,13 +300,13 @@ body {
 
   .article-list {
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     width: 100%;
-    max-width: 100%; 
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0; 
+    padding: 0;
   }
-  
+
   #article-list-img {
     width: 100%;
     max-width: 100%;
@@ -275,15 +317,15 @@ body {
     align-items: center;
     justify-content: center;
   }
-  
+
   .article-list-text {
     flex-basis: 100%;
     text-align: center;
   }
-  
+
   .single-article {
     max-width: 95%;
-    margin: 0 auto; 
+    margin: 0 auto;
     margin-top: 20px;
     padding: 25px;
     display: flex;
@@ -294,16 +336,16 @@ body {
 
   .single-article-img {
     width: 100%;
-    max-width: 95%; 
+    max-width: 95%;
     height: auto;
     margin: 0 auto;
     display: block;
   }
-  
+
   .single-article h1 {
     font-size: 2rem;
   }
-  
+
   .comment-form-container {
     display: flex;
     flex-direction: column;
@@ -312,21 +354,21 @@ body {
     margin-left: 10px;
     margin-right: 10px;
   }
-  
+
   .comment-form-container textarea {
     padding-top: 15px;
     margin-top: 20px;
     width: 100%;
     max-width: 95%;
   }
-  
+
   .vote-handler-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
-  
-  nav {
+
+  .navigation-bar {
     display: flex;
     flex-direction: row;
     align-content: space-between;
@@ -334,23 +376,22 @@ body {
     padding: 5px;
     height: 10%;
   }
-  
-  nav a {
+
+  .navigation-bar a {
     padding: 0;
     width: 55%;
     margin: 0;
   }
-  
+
   #nc-title {
     left: 20px;
     margin-left: 10px;
     color: #00bbc9;
   }
-  
+
   .sort-by-form {
     margin-top: 20px;
     align-items: center;
     justify-content: center;
   }
 }
-
