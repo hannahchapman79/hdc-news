@@ -1,5 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { incrementVotes } from "../../api";
+import { Button, Stack } from '@mui/material';
+import ThumbDownIcon from '@mui/icons-material/ThumbDown';
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 
 function VoteHandler({ article }) {
     const [incrementedVotes, setIncrementedVotes] = useState(0);
@@ -22,8 +25,8 @@ return (
     <>
             <h3>Votes: {article.votes + incrementedVotes}</h3>
             <div className="vote-handler-container">
-            <button className="upvote-button" onClick={incrementVote}>Up-vote</button>
-            <button className="downvote-button" onClick={decrementVote}>Down-vote</button>
+            <Button className="upvote-button" onClick={incrementVote} startIcon={<ThumbUpIcon />} >Up-vote</Button>
+            <Button className="downvote-button" onClick={decrementVote} startIcon={<ThumbDownIcon />}>Down-vote</Button>
             </div>
         </>
     )

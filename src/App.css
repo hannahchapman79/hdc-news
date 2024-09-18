@@ -280,6 +280,10 @@ body {
   justify-content: space-between;
 }
 
+.upvote-button, .upvote-button {
+  color:#00bbc9;
+}
+
 @media only screen and (max-width: 600px) {
 
   .article-list-form-container {
