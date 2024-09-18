@@ -124,12 +124,46 @@ body {
 }
 
 .comment-card {
-  background-color: #f5f6ff;
+  background-color: #f9f9f9;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  border: 1px solid #ddd;
   padding: 1.5rem;
   margin: 1rem 0;
-  text-align: center;
+  text-align: left;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  position: relative;
+}
+
+.comment-card::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid #f9f9f9;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+.comment-author {
+  font-weight: bold;
+  color: #00bbc9;
+  margin-bottom: 0.5rem;
+}
+
+.comment-date {
+  font-size: 0.8rem;
+  color: #686868;
+  margin-bottom: 1rem;
+}
+
+.comment-text {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.4;
 }
 
 .comment-form-container {
@@ -162,10 +196,6 @@ body {
   text-align: center;
 }
 
-.comment-author {
-  font-weight: bold;
-  color: #00bbc9;
-}
 
 .single-article button {
   margin: 20px;
@@ -193,13 +223,14 @@ body {
   text-decoration: underline;
 }
 
-.sort-by-form, .limit-results-form {
+.sort-by-form,
+.limit-results-form {
   display: flex;
   align-items: center;
   margin: 10px 20px;
 }
 
-.sort-by-form  select {
+.sort-by-form select {
   padding: 8px 12px;
   font-size: 1rem;
   border: 1px solid #ccc;
@@ -209,7 +240,7 @@ body {
   transition: border-color 0.3s;
 }
 
-.limit-results-form  select {
+.limit-results-form select {
   padding: 8px 12px;
   font-size: 1rem;
   border: 1px solid #ccc;
@@ -280,8 +311,9 @@ body {
   justify-content: space-between;
 }
 
-.upvote-button, .upvote-button {
-  color:#00bbc9;
+.upvote-button,
+.upvote-button {
+  color: #00bbc9;
 }
 
 @media only screen and (max-width: 600px) {
