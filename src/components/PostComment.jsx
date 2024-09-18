@@ -4,6 +4,8 @@ import { useContext } from "react";
 import { UserContext } from "../user";
 import Lottie from "lottie-react"
 import loadingAnimation from "../components/loading-animation.json"
+import SendIcon from '@mui/icons-material/Send';
+import { Button } from '@mui/material';
 
 function PostComment(props) {
 
@@ -60,7 +62,7 @@ function PostComment(props) {
                 <form onSubmit={handleSubmit} >
                     <label htmlFor="new-comment-body">Post a comment!</label>
                     <textarea id="new-comment-body" name="new-comment-body" value={newCommentBody} onChange={handleBodyChange} required></textarea>
-                    <button type="submit" >Submit</button>
+                    <Button type="submit" variant="contained" endIcon={<SendIcon />}>Post</Button>
                 </form>
                     </div>
             </>

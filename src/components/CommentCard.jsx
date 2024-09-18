@@ -4,6 +4,8 @@ import { deleteComment } from "../../api";
 import { useState } from "react"
 import Lottie from "lottie-react"
 import loadingAnimation from "../components/loading-animation.json"
+import { Button } from '@mui/material';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 function CommentCard (props) {
 const { comment } = props;
@@ -42,12 +44,17 @@ if (isLoading) {
       )
 }
 else {
+
+  const date = new Date(comment.created_at)
+  const readableDate = date.toLocaleDateString('en-UK', { year: 'numeric', month: 'short', day: 'numeric' })
+
   return (
     <>
       <section className="comment-card">
-        <p><span className="comment-author">{comment.author}:</span><br></br>{comment.body}</p>
-        <p>Votes:{comment.votes}</p>
-        {comment.author === loggedInUser.username && <button onClick={handleClick} value={comment.comment_id}>Delete</button>}
+        <p><span className="comment-author">{comment.author}:</span></p><br></br><p className="comment-text">{comment.body}</p>
+        <p>Votes: {comment.votes}</p>
+        <p className="comment-date">{readableDate}</p>
+        {comment.author === loggedInUser.username && <Button startIcon={<DeleteIcon/>} variant="outlined" onClick={handleClick} value={comment.comment_id}>Delete</Button>}
       </section>
     </>
   );
