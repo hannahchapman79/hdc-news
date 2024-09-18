@@ -1,5 +1,4 @@
 import axios from "axios";
-import { useSearchParams } from "react-router-dom";
 
 const api = axios.create({
   baseURL: "https://be-nc-news-flqs.onrender.com/api",

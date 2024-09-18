@@ -1,5 +1,5 @@
 import { postComment } from "../../api"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { useContext } from "react";
 import { UserContext } from "../user";
 import Lottie from "lottie-react"
