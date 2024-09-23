@@ -8,6 +8,7 @@ import { SortBy } from "./SortBy";
 import ErrorComponent from "./Error"
 import { ResultsPerPage } from "./ResultsPerPage";
 import { ResultsPagination } from './Pagination';
+import Header from './Header';
 
 function ArticlesList() {
 
@@ -58,6 +59,15 @@ function ArticlesList() {
     setSearchParams(newParams);
   }, [topic, sortBy, order, resultsPerPage, page, setSearchParams])
 
+  const resetParams = () => {
+    setSortBy("");
+    setOrder("");
+    setResultsPerPage("");
+    setPage(1);
+    setError(null);
+    setSearchParams({});
+  };
+
   if (error) {
     return <ErrorComponent message={error.message} />;
   }
@@ -67,6 +77,7 @@ function ArticlesList() {
   } else {
     return (
       <>
+      <Header resetParams={resetParams} /> 
         {topic ? <h2>{topic} articles</h2> : null}
         <div className="article-list-form-container">
           <SortBy sortBy={sortBy} setSortBy={setSortBy} order={order} setOrder={setOrder}></SortBy>
