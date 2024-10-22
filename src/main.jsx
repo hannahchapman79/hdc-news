@@ -6,9 +6,9 @@ import { BrowserRouter } from 'react-router-dom'
 import { UserProvider } from './user.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <BrowserRouter>
+    <HashRouter>
         <UserProvider>
     <App />
         </UserProvider>
-    </BrowserRouter>
+    </HashRouter>
 )
