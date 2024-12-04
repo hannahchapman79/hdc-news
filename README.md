@@ -1,6 +1,6 @@
 # Northcoders News
 
-Hosted version: [https://66b5de66c4712d2e55c90430--hdcnews.netlify.app/](https://hdcnews.netlify.app)
+Hosted version: https://hdcnews.netlify.app/
 
 ## Description
 
