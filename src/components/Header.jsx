@@ -13,7 +13,7 @@ function Header({ resetParams }) {
   return (
     <>
       <nav className="navigation-bar">
-        <h2 id="nc-title">NC News</h2>
+        <h2 id="nc-title">HDC News</h2>
         <Link to="/">Home</Link>
         <Link to="/articles" onClick={handleArticlesClick}>Articles</Link>
         <Link to="/topics">Topics</Link>
